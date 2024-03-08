@@ -1,0 +1,384 @@
+body{
+  background-color: transparent;
+}
+
+/* a traves del nombre del elemento */
+nav {
+  background-color: aqua;
+}
+
+/* a traves del nombre de la clase */
+.p-1 {
+  background-color: red;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.p-2 {
+  background-color: chartreuse;
+}
+
+.p-3 {
+  background-color: coral;
+}
+
+.main-clase {
+  background-color: blueviolet;
+}
+
+/* a traves del nombre de la id */
+#p-4 {
+  background-color: darkgreen;
+}
+
+[data-parrafo="parrafo"] {
+  background-color: darkred;
+}
+
+/* pseudoclases */
+
+/* .p-2:hover {
+  background-color: skyblue;
+  color: white;
+  font-size: 25px;
+} */
+
+#nombrePersona:focus {
+  background-color: goldenrod;
+}
+
+.sexo-persona:checked {
+  background-color: red;
+  color: red;
+}
+
+/* selectores combinados */
+
+main article section h2 {
+  background-color: fuchsia;
+}
+
+.main-clase article section h2 {
+  background-color: blue;
+}
+
+.main-clase article [data-section] .h2-custom {
+  background-color: gold;
+}
+
+.header-cabecera li {
+   font-size: 20px;
+   padding: 1rem;
+}
+
+/* pruebas */
+
+.anclaje {
+  text-decoration: none;
+}
+
+.container {
+  background-color: cornflowerblue;
+  width: 450px;
+  height: 450px;
+  /* position: relative; */
+  position: fixed;
+  bottom: 0;
+}
+
+.hijo {
+  /* position: absolute; */
+  background-color: red;
+  width: 150px;
+  height: 150px;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.h1-box {
+  text-align: center;
+  border: 2px solid black;
+  padding: 30px;
+  margin: 30px;
+}
+
+/* transitions */
+
+.container_efectos {
+  width: 450px;
+  height: 450px;
+  border: 1px solid black;
+  margin: auto;
+  position: relative;
+}
+
+.flecha {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  bottom: 10px;
+  right: 10px;
+  cursor: pointer;
+  background-color: aqua;
+  border-radius: 100%;
+  text-align: center;
+  margin-top: 3px;
+  /* nombre de la propiedad | duración | función | retardo */
+  transition: bottom 3s ease-in-out 1s;
+}
+
+/* animations  */
+
+#div {
+  width: 100px;
+  height: 100px;
+  background-color: red;
+  animation-name: example;
+  animation-duration: 10s;
+  animation-iteration-count:5;
+}
+
+@keyframes example {
+  0% {background-color: red;}
+  20% {background-color: yellow;}
+  40% {background-color: green;}
+  80% {background-color: orange;}
+  100% {background-color: brown;}
+}
+
+/* unidades */
+/* 
+- px 
+- pt
+- em
+- rem 
+- vh
+- vw
+*/
+
+.container-vh {
+  width: 100%;
+  height: 100vh;
+  background-color: black;
+}
+
+/* media querys */
+
+.media-querys {
+  width: 100%;
+  height: 350px;
+  margin: auto;
+  margin: 5rem 0;
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) { 
+  .media-querys {
+    background-color: aquamarine;
+  }
+  .media-querys p {
+    font-size: 16px;
+  }
+ }
+
+/*  Medium devices (tablets, 768px and up) */
+ @media (min-width: 768px) { 
+  .media-querys {
+    background-color: red;
+  }
+  .media-querys p {
+    font-size: 20px;
+  }
+} 
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) { 
+  .media-querys {
+    background-color: green;
+  }
+  .media-querys p {
+    font-size: 32px;
+  }
+ }
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) { 
+  .media-querys {
+    background-color: yellow;
+  }
+  .media-querys p {
+    font-size: 50px;
+  }
+ }
+
+ /*  flex boxs */
+
+ .flex-container {
+  background-color: rgb(177, 177, 177);
+  width: 100%;
+  height: 450px;
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 1rem;
+  flex-direction: row;
+  margin: 5rem 0;
+  padding: 1rem;
+ }
+
+ .caja1 {
+  height: 350px;
+ }
+ .caja2 {
+  height: 350px;
+ }
+ 
+
+ /* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) { 
+  .flex-container {
+    flex-direction: column;
+   }
+  .caja1 {
+    width: 100%;
+    background-color: orange;
+   }
+   .caja2 {
+    width: 100%;
+    background-color: orange;
+   }
+ }
+
+/*  Medium devices (tablets, 768px and up) */
+ @media (min-width: 768px) { 
+  .caja1 {
+    width: 100%;
+    background-color: orange;
+   }
+   .caja2 {
+    width: 100%;
+    background-color: orange;
+   }
+} 
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) { 
+
+ }
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) { 
+  .flex-container {
+    flex-direction: row;
+  }
+  .caja1 {
+    width: 50%;
+    background-color: orange;
+   }
+   .caja2 {
+    width: 50%;
+    background-color: orange;
+   }
+ }
+
+ .caja-amarilla {
+  width: 100%;
+  height: 350px;
+  background-color: greenyellow;
+ }
+
+ .flex-container-2 {
+  margin: 1rem 0;
+  width: 100%;
+  height: 300px;
+  display: flex;
+  flex-direction: row;
+  background-color: rgb(212, 212, 212);
+  gap: 10px;
+ }
+
+ .box1 {
+  width: 33.3%;
+  background-color: blue;
+ }
+ .box2 {
+  width: 33.3%;
+  background-color: blue;
+ }
+ .box3 {
+  width: 33.3%;
+  background-color: blue;
+ }
+ 
+  /* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) { 
+  .flex-container-2 {
+    flex-direction: column;
+  }
+  .box1 {
+    width: 100%;
+    background-color: blue;
+    height: 200px;
+   }
+   .box2 {
+    width: 100%;
+    background-color: blue;
+    height: 200px;
+   }
+   .box3 {
+    width: 100%;
+    background-color: blue;
+    height: 200px;
+   }
+ }
+
+/*  Medium devices (tablets, 768px and up) */
+ @media (min-width: 768px) { 
+
+} 
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) { 
+
+ }
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) { 
+  .flex-container-2 {
+    flex-direction: row;
+  }
+  .box1 {
+    width: 33.3%;
+    background-color: blue;
+    height: 200px;
+   }
+   .box2 {
+    width: 33.3%;
+    background-color: blue;
+    height: 200px;
+   }
+   .box3 {
+    width: 33.3%;
+    background-color: blue;
+    height: 200px;
+   }
+ }
+
+
+
+
+ .dom{
+  background-color: rgb(166, 166, 166);
+  font-weight: bold;
+  width: 100%;
+  height: 300px;
+ }
+
+
+ .color-rojo {
+  background-color: red;
+  font-size: 50px;
+  font-weight: bold;
+  color: white;
+ }
